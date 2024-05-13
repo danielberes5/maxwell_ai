@@ -1,0 +1,29 @@
+{
+    "Maxwell": {
+        "checkpoints": [
+            {
+                "steps": 2304,
+                "file_path": "results\\TestRun20\\Maxwell\\Maxwell-2304.onnx",
+                "reward": null,
+                "creation_time": 1715604920.9131794,
+                "auxillary_file_paths": [
+                    "results\\TestRun20\\Maxwell\\Maxwell-2304.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2304,
+            "file_path": "results\\TestRun20\\Maxwell.onnx",
+            "reward": null,
+            "creation_time": 1715604920.9131794,
+            "auxillary_file_paths": [
+                "results\\TestRun20\\Maxwell\\Maxwell-2304.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

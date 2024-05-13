@@ -4,13 +4,16 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using static RedSpawner;
+using static BlueSpawner;
 
 public class MyAgent : Agent
 {
-    Rigidbody m_rigidbody;
 
     public GameObject RedS;
     public GameObject BlueS;
+    RedSpawner m_redSpawner;
+    BlueSpawner m_blueSpawner;
 
     bool isOpen = false;
 
@@ -24,17 +27,21 @@ public class MyAgent : Agent
 
     void Start()
     {
-        // Eredeti anyag mentése
-        m_rigidbody = GetComponent<Rigidbody>();
+        m_redSpawner = RedS.GetComponent<RedSpawner>();
+        m_blueSpawner = BlueS.GetComponent<BlueSpawner>();
     }
 
     public override void OnEpisodeBegin()
     {
         // We reset the agent's position
+        m_redSpawner.Begin();
+        m_blueSpawner.Begin();
+
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
+
         // We don't need this function now because we use the RayPerceptionSensor
         // Note however that we could add additional observations here, if we wanted to, like the speed & velocity of the agent etc.
     }
@@ -108,7 +115,7 @@ public class MyAgent : Agent
 
             // Meghatározza, hogy a labda melyik oldalán ütközik az ajtónak
             bool ballOnLeftSide = collision.contacts[0].point.z < transform.position.z;
-            //EndThisEpisode();
+            EndThisEpisode();
         }
 
         if (collision.gameObject.CompareTag("RedBall"))
@@ -116,7 +123,7 @@ public class MyAgent : Agent
 
             // Meghatározza, hogy a labda melyik oldalán ütközik az ajtónak
             bool ballOnLeftSide = collision.contacts[0].point.z > transform.position.z;
-            //EndThisEpisode();
+            EndThisEpisode();
         }
     }
 

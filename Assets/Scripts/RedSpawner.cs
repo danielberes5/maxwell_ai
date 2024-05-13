@@ -6,9 +6,8 @@ public class RedSpawner : MonoBehaviour
 {
     public GameObject BallPrefab;
 
-    void Start()
-    {
-        for (int i = 0; i < 5; i++)
+    public void Begin() {
+         for (int i = 0; i < 5; i++)
         {
             // We instantiate a new Ball at the generated axis while keeping the Y and Z axes constant
             var ball = Instantiate(BallPrefab, transform.position + new Vector3(0, 25, 12), Quaternion.identity, gameObject.transform);
@@ -22,7 +21,13 @@ public class RedSpawner : MonoBehaviour
                 rb.velocity = new Vector3(Random.Range(50, 100) * (Random.Range(0, 1) > 0.5 ? 1 : -1), Random.Range(50, 100) * (Random.Range(0, 1) == 0 ? 1 : -1), Random.Range(50, 100) * (Random.Range(0, 1) == 0 ? 1 : -1));
                 rb.useGravity = false; // Gravitáció kikapcsolása
             }
+            ball.tag = "RedBall";
         }
+    }
+
+    void Start()
+    {
+       
     }
 
     private void Update()
