@@ -1,0 +1,47 @@
+{
+    "Maxwell": {
+        "checkpoints": [
+            {
+                "steps": 499995,
+                "file_path": "results\\run3\\Maxwell\\Maxwell-499995.onnx",
+                "reward": 0.6586179855420913,
+                "creation_time": 1715970890.2977889,
+                "auxillary_file_paths": [
+                    "results\\run3\\Maxwell\\Maxwell-499995.pt"
+                ]
+            },
+            {
+                "steps": 999998,
+                "file_path": "results\\run3\\Maxwell\\Maxwell-999998.onnx",
+                "reward": 0.667868625635329,
+                "creation_time": 1715976169.9058843,
+                "auxillary_file_paths": [
+                    "results\\run3\\Maxwell\\Maxwell-999998.pt"
+                ]
+            },
+            {
+                "steps": 1000024,
+                "file_path": "results\\run3\\Maxwell\\Maxwell-1000024.onnx",
+                "reward": 0.6678400358915328,
+                "creation_time": 1715976170.0962586,
+                "auxillary_file_paths": [
+                    "results\\run3\\Maxwell\\Maxwell-1000024.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000024,
+            "file_path": "results\\run3\\Maxwell.onnx",
+            "reward": 0.6678400358915328,
+            "creation_time": 1715976170.0962586,
+            "auxillary_file_paths": [
+                "results\\run3\\Maxwell\\Maxwell-1000024.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
