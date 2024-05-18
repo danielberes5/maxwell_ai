@@ -101,8 +101,12 @@ public class MyAgent : Agent
                 break;
         }
 
-        if (!isOpen) {
+        if (isOpen)
+        {
             AddReward(0.1f);
+        }
+        else {
+            AddReward(0.2f);
         }
         
     }
