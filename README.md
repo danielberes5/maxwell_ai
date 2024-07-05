@@ -12,3 +12,6 @@ The poject was made with the following technologies:
   <li>TensorBoard</li>
   <li>TensorFlow</li>
 </ul>
+
+## Creator
+[danielberes5](https://github.com/danielberes5)
